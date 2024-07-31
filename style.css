@@ -1,22 +1,10 @@
 #grid {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    align-items: center;
 }
 
 .row {
     display: flex;
     flex-direction: row;
-    gap: 2px;
-
 }
-
-.square {
-    background-color: white;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    width: 30px;
-    height: 30px;
-}
-
