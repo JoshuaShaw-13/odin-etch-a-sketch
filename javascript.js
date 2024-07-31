@@ -29,6 +29,7 @@ function createNewGrid(size = 16) {
 
             new_div.style.width = square_size + "px";
             new_div.style.height = square_size + "px";
+            new_div.style.opacity = 0.1;
 
             if ((i+j)%2 == 0) {
                 new_div.style.backgroundColor = 'gray';
@@ -37,10 +38,16 @@ function createNewGrid(size = 16) {
             };
 
             new_div.addEventListener("mouseover", () => {
-                new_div.style.backgroundColor = 'red';
+                new_div.style.backgroundColor = 'rgb(255,0,0)';
+                new_div.style.opacity = +new_div.style.opacity + 0.1;
             });
             new_div.addEventListener("mouseout", () => {
-                new_div.style.backgroundColor = 'blue';
+                let r = Math.random()*255;
+                let g = Math.random()*255;
+                let b = Math.random()*255;
+                let rgb = "rgb("+r+","+g+","+b+")";
+                
+                new_div.style.backgroundColor = rgb;
             });
 
             new_row.appendChild(new_div);
